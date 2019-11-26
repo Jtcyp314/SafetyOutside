@@ -1,0 +1,243 @@
+body{
+    background-color: #B4C5E4;
+}
+
+.preload{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10%;
+   
+    width: 25em;
+    height: 25em;
+}
+
+@keyframes sun-grow {
+  0%, 90%, 100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  15%, 80% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes ray-show-one {
+  0%, 15%, 80%, 100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  20%, 70% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes ray-show-two {
+  0%, 20%, 80%, 100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  25%, 70% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes ray-show-three {
+  0%, 25%, 80%, 100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  30%, 70% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes ray-show-four {
+  0%, 30%, 80%, 100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  35%, 70% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes ray-show-five {
+  0%, 35%, 80%, 100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  40%, 70% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes ray-show-six {
+  0%, 40%, 80%, 100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  45%, 70% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes ray-show-seven {
+  0%, 45%, 80%, 100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50%, 70% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes ray-show-eight {
+  0%, 50%, 80%, 100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  55%, 70% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.sunshine .sun-full {
+  animation: sun-grow 4s infinite cubic-bezier(0.2, 0.85, 0.4, 1.5);
+  transform-origin: center center;
+}
+
+.sunshine .sun-ray-one {
+  animation: ray-show-one 4s infinite ease-in;
+  transform-origin: center right;
+}
+
+.sunshine .sun-ray-two {
+  animation: ray-show-two 4s infinite ease-in;
+  transform-origin: bottom right;
+}
+
+.sunshine .sun-ray-three {
+  animation: ray-show-three 4s infinite ease-in;
+  transform-origin: bottom center;
+}
+
+.sunshine .sun-ray-four {
+  animation: ray-show-four 4s infinite ease-in;
+  transform-origin: bottom left;
+}
+
+.sunshine .sun-ray-five {
+  animation: ray-show-five 4s infinite ease-in;
+  transform-origin: center left;
+}
+
+.sunshine .sun-ray-six {
+  animation: ray-show-six 4s infinite ease-in;
+  transform-origin: top left;
+}
+
+.sunshine .sun-ray-seven {
+  animation: ray-show-seven 4s infinite ease-in;
+  transform-origin: top center;
+}
+
+.sunshine .sun-ray-eight {
+  animation: ray-show-eight 4s infinite ease-in;
+  transform-origin: top right;
+}
+
+#loadwords{
+    font-family: Arial;
+    letter-spacing: 0.25em;
+    text-align: center;
+}
+
+#header{
+    font-family: Arial;
+    letter-spacing: 0.25em;
+    text-align: center;
+}
+#selection{
+    font-family: Helvetica;
+    letter-spacing: 0.25em;
+    margin-left: 15%;
+    margin-top: 10%;
+}
+
+.image-wrapper {
+    box-sizing:border-box;
+    float: left;
+    width: 50%;
+    margin-bottom:2em;
+/*    padding-left: 2em;*/
+}
+
+
+.image-wrapper > img {
+  width: 100%;
+}
+
+.image-wrapper > span {
+  display: inline-block;
+  width: 100%;
+}
+
+.column{
+    float: left;
+    width: 25%;
+}
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+#bikeimg{
+/*    margin-left: 25em;*/
+    width: 100%;
+    max-width: 120px;
+}
+#bikewords{
+    margin-left: 2em;
+    font-family: Helvetica;
+    letter-spacing: 0.25em;
+}
+#runimg{
+/*    margin-left: 50em;*/
+    width: 100%;
+    max-width: 120px;
+}
+#runwords{
+    margin-left: 2.2em;
+    font-family: Helvetica;
+    letter-spacing: 0.25em;
+}
+#swimimg{
+/*     margin-left: 25em;*/
+     width: 100%;
+    max-width: 120px;
+}
+#swimwords{
+    margin-left: 2em;
+    font-family: Helvetica;
+    letter-spacing: 0.25em;
+}
+#hikeimg{
+ 
+/*      margin-left: 55em;*/
+     width: 100%;
+    max-width: 120px;
+}
+#hikewords{
+    margin-left: 2em;
+    font-family: Helvetica;
+    letter-spacing: 0.25em;
+}
