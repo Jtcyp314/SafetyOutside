@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <!--023ce61dde354ed0f026d8f6747dda84-->
+  <title>JSONAJAX</title>
+  <meta charset="utf-8"/>
+  <script src="jquery-3.4.1.min.js"></script>
+</head>
+
+
+<body onload="getCurrency()">
+
+  <h1>Currency Converter</h1>
+  <div id="data">Loading...</div>
+</body>
+  <script>
+    function getCurrency()
+    {
+
+
+      request = new XMLHttpRequest();
+ 
+      request.open("GET", "pro.openweathermap.org/data/2.5/forecast/hourly?q=London,us&mode=json", true);
+
+      request.onreadystatechange = function() {
+ 
+        if (request.readyState == 4 && request.status == 200) {
+
+          result = request.responseText;
+          weather = JSON.parse(result);
+          
+          alert("HIT")
+          document.getElementById("data").innerHTML ="USD to Bitcoin: " + weather.list.weather.main;
+
+          
+        }
+        else
+          alert("Loading...");
+
+      }
+
+      request.send();
+    };
+  </script>
+
+
+
+  <p>The above is from the coindesk api and displays bitcoin in any currency.</p>
+  <p>I found it from <a href = "https://www.coindesk.com/api">https://www.coindesk.com/api</a></p>
+  <p>The options that I used were the same ones that we went over in class. I used GET because I was asking for a certain resource,</br> the URL is the URL that as given in the documentation for the API, and true at the end means that it is going to access the data async so that the rest of the page can load.</p>
+  <p>USAGE:</br>1. This could be very useful for a travel company or hotel that wants to do coinversions into bitcoin so that payments can be anonymous</br>2.This could be used by smaller banks for currency exchange services as they try to break into the crypto market and want to show online customers current value.</p>
+</html>
