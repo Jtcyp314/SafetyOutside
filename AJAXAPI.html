@@ -14,13 +14,26 @@
   <div id="data">Loading...</div>
 </body>
   <script>
+    //04e55ac87eaa2a6ec3b0fc7212888ebb
     function getCurrency()
     {
 
 
       request = new XMLHttpRequest();
  
-      request.open("GET", "pro.openweathermap.org/data/2.5/forecast/hourly?q=London,us&mode=json", true);
+      request.open("GET", "https://samples.openweathermap.org/data/2.5/weather?q=London,uk$mode=json&appid=04e55ac87eaa2a6ec3b0fc7212888ebb", true);
+      request.setRequestHeader('Access-Control-Allow-Origin','*')
+/*      request.setRequestHeader('Access-Control-Allow-Origin', '<origin>')
+      request.setRequestHeader('Access-Control-Allow-Origin', null)   */   
+
+
+
+
+/*      request = new Request("https://samples.openweathermap.org/data/2.5/weather?q=London,uk$mode=json&appid=04e55ac87eaa2a6ec3b0fc7212888ebb")
+    header = request.headers;
+    header.append('Access-Control-Allow-Origin','*')
+    header.append('Access-Control-Allow-Origin', '<origin>')
+    header.append('Access-Control-Allow-Origin', null)*/
 
       request.onreadystatechange = function() {
  
