@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Safety Outside</title>
+     <link href="https://fonts.googleapis.com/css?family=Jockey+One&display=swap" rel="stylesheet">
+    <link href="https://seattleowl.com/pointer.js/pointer.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="perspective.css">
+     <link rel="stylesheet" href="button.css">
+   
+</head>
+    
+    <body>
+        <a href="perspective.html"><img id = "logo" src = "logo.png" a href="perspective.html"></a>
+<div class="perspective-text">
+
+<!--
+ <div class="perspective-line">
+    <p>Is it</p>
+    <p>Is it</p>
+  </div>
+  <div class="perspective-line">
+    <p><span class="safe1">Safe</span> to</p>
+ <p><span class="safe2">Safe</span> to</p>
+  </div>
+  <div class="perspective-line">
+      <p>GO</p>
+      <p><span class="bike">BIKE</span> or <span class="run">RUN</span></p>
+  </div>
+  <div class="perspective-line">
+    <p>Outside?</p>
+    <p><span class="swim">SWIM</span> or <span class="hike">HIKE</span>?</p>
+  </div>
+    <div>
+        <h4 id="abtinfo">Because exploring the outdoors should be safe.</h4>
+    </div>
+-->
+        </div>
+    
+        
+<div class="fabs">
+  <a href="perspective.html" target="_blank" class="fab"><span id="homeword">HOME</span></a>
+  <a href="about.html" target="_blank" class="fab"><span id="abtword">ABOUT</span></a>
+
+  <a id="prime" class="fab"><span id = "plus">&#43;</span><i class="prime zmdi zmdi-plus"></i></a>
+</div>
+        
+
+<script src="https://seattleowl.com/pointer.js/pointer.js"></script>
+        <script>
+init_pointer({
+	pointerColor: "#fff", // Css color
+	ringSize: 15, // Pixels
+	ringClickSize: 10 // Pixels when clicking
+})
+        </script>
+       
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript">
+            $('#prime').click(function() {
+  toggleFab();
+});
+
+//Toggle chat and links
+function toggleFab() {
+  $('.prime').toggleClass('is-active');
+  $('#prime').toggleClass('is-float');
+  $('.fab').toggleClass('is-visible');
+  
+}
+
+// Ripple effect
+var target, ink, d, x, y;
+$(".fab").click(function(e) {
+  target = $(this);
+  //create .ink element if it doesn't exist
+  if (target.find(".ink").length == 0)
+    target.prepend("<span class='ink'></span>");
+
+  ink = target.find(".ink");
+  //incase of quick double clicks stop the previous animation
+  ink.removeClass("animate");
+
+  //set size of .ink
+  if (!ink.height() && !ink.width()) {
+    //use parent's width or height whichever is larger for the diameter to make a circle which can cover the entire element.
+    d = Math.max(target.outerWidth(), target.outerHeight());
+    ink.css({
+      height: d,
+      width: d
+    });
+  }
+
+  //get click coordinates
+  //logic = click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center;
+  x = e.pageX - target.offset().left - ink.width() / 2;
+  y = e.pageY - target.offset().top - ink.height() / 2;
+
+  //set the position and add class .animate
+  ink.css({
+    top: y + 'px',
+    left: x + 'px'
+  }).addClass("animate");
+});
+
+        </script>
+    </body>
+    </html>
+
