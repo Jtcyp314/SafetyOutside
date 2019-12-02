@@ -1,0 +1,62 @@
+
+#header{
+    font-weight: 900;
+   text-align: center;
+    font-size: 58px;
+    font-family: Arial;
+    letter-spacing: -2px;
+}
+body {
+	background-color: #222;
+	color: #fff;
+}
+
+#typing{
+    font-size: 30px;
+    font-family: 'Roboto';
+    letter-spacing: 5px;
+    margin-left: 5em;
+    margin-top: 5em;
+   padding-right: 5em;
+}
+
+.txt-rotate{
+    color: aqua;
+}
+
+#abttext{
+font-family: 'Roboto';
+    margin-left: 7.5em;
+    margin-top: 2em;
+    letter-spacing: 2px;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+#logo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 2em;
+    margin-left: 2em;
+    height: 11em;
+    width: auto;
+}
+.fixed {
+	position: fixed;
+	top: 40px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.members{
+    position: fixed;
+    bottom: 0;
+    font-family: 'Roboto';
+    margin-bottom: 10em;
+    margin-left: 5em;
+    letter-spacing: -2px;
+    font-weight: 900;
+    font-size: 30px;
+    
+}
