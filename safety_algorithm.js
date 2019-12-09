@@ -236,7 +236,12 @@ function calculateSafety(activity, weather_id, weather_descrip, temp, time, suns
     return safetyVal;
 }
 
-var data = [
+/////////////////////////
+//  RUNNING TEST DATA  //
+/////////////////////////
+
+//replace with database info
+var data = [ 
   {
     "activity" : "swim", 
     "weather_id": 800, 
@@ -252,7 +257,7 @@ numData = 1;
 
 for(i = 0; i < numData; i++) {
   safety = calculateSafety(data[i].activity, data[i].weather_id, data[i].weather_descrip, data[i].temp, data[i].time, data[i].sunset, data[i].sunrise, data[i].wind_speed);
-  //results
+  //printing results for now -> send back to webpage later
   console.log("RESULTS:");
   console.log("safety value: " + safety);
   console.log("suggestions:");
