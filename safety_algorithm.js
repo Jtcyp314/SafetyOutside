@@ -1,4 +1,6 @@
-//defining the boundary conditions
+///////////////////////////
+//  BOUNDARY CONDITIONS  //
+///////////////////////////
 const MILD_WEATHER_IDS = [300, 310, 500, 520, 600, 612, 615, 620];
 const NUM_MILD_IDS = 8;
 const MODERATE_WEATHER_IDS = [210, 301, 311, 313, 501, 521, 601, 621];
@@ -17,7 +19,9 @@ const COLDEST_TEMP = 247, COLDER_TEMP = 263, COLD_TEMP = 278;
 //wind speed in m/s
 const HIGHEST_WIND = 17, HIGHER_WIND = 13.5, HIGH_WIND = 11;
 
-//list of alerts/suggestions to display to user
+/////////////////
+//  VARIABLES  //
+/////////////////
 var alerts = new Array();
 var suggestions = new Array();
 var numAlerts = 0, numSuggestions = 0, safetyVal = 100;
@@ -241,7 +245,7 @@ function calculateSafety(activity, weather_id, weather_descrip, temp, time, suns
 /////////////////////////
 
 //replace with database info
-var data = [ 
+var data = [
   {
     "activity" : "swim", 
     "weather_id": 800, 
