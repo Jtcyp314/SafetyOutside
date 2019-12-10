@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      /*let socket = io();
+      let el;
+
+      socket.on('test', (timeString) => {
+        console.log(timeString);
+      });
+      
+      socket.on('time', (timeString) => {
+        el = document.getElementById('server-time');
+        el.innerHTML = 'Server time: ' + timeString;
+      });*/
+        var socket = io(); // TIP: io() with no args does auto-discovery
+        var obj;
+  socket.on('connect', function () 
+  { 
+
+    socket.emit('test', function(serverObj)
+    {
+        testString = serverObj;
+        obj = JSON.parse(testString);
+        console.log(obj.list[0].main.temp);
+        console.log(obj.list[0].weather[0].description);
+    });
+
+  // TIP: you can avoid listening on `connect` and listen on events directly too!
+//    socket.emit('test', 'hello world', function (word) 
+//    { // args are sent in order to acknowledgement function
+//      console.log(word); // data will be 'tobi says woot'
+//    });
+
+/*    socket.emit('ferret', 'tobi', 'woot', function (data) 
+    { // args are sent in order to acknowledgement function
+      console.log(data); // data will be 'tobi says woot'
+    });*/
+
+  });
+
+//messageToPrint = obj.message;
+
+//console.log(obj.message);
+
+    </script>
+  </head>
+  <body>
+    <p id="server-time"></p>
+  </body>
+</html>
