@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* CSS Document */
+body{
+	padding:0;
+	width: 100%;
+	height: 100%;
+	background: #222;
+	
+}
+
+#logo{
+	
+
+	position: relative;
+	float: top;
+	float: left;
+}
+
+.container2{
+/*
+	overflow: hidden;
+	position: relative;
+	top: 10em;
+	right: 15em;
+	z-index: 997;
+	float:right;
+*/
+	position: relative;
+	float: right;
+	border-left:25em;
+	padding-top: 10em;
+	margin-right: 20em;
+	display: inline-block;
+	vertical-align: middle;
+	margin-bottom: 10em;
+}
+
+.block{
+	padding: 3px;
+	height: 50%;
+	width: 200px;
+	border-style: solid;
+	border-color: #fff;
+/*	display: block;*/
+}
+
+#hikeimg{
+	height: 5em;
+	width: auto;
+}
+
+.img{
+    height: 5em;
+    width: auto;
+	margin-left: 10px;
+	
+}
+
+h2{
+	padding-top: 22px;
+	margin: 0;
+	font-size: 30px;
+	color: #fff;
+	font-family:  'Fredoka One';
+	letter-spacing: 1px;
+	float: top;
+	float: left;
+	text-align: center;
+}
+
