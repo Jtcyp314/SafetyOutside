@@ -16,6 +16,10 @@ body{
 	float: left;
 }
 
+a:hover{
+	
+}
+
 .container2{
 /*
 	overflow: hidden;
@@ -39,8 +43,10 @@ body{
 	padding: 3px;
 	height: 50%;
 	width: 200px;
+/*
 	border-style: solid;
 	border-color: #fff;
+*/
 /*	display: block;*/
 }
 
@@ -63,8 +69,11 @@ h2{
 	color: #fff;
 	font-family:  'Fredoka One';
 	letter-spacing: 1px;
-	float: top;
 	float: left;
 	text-align: center;
+}
+
+img:hover + h2{
+	display:block;
 }
 

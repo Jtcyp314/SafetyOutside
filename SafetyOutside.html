@@ -5,6 +5,9 @@
 	<title>Safety Outside</title>
 	<link rel="stylesheet" href="newHome.css">
 	<link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+	
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
 <body>
@@ -26,20 +29,28 @@
 		</div>
 		<div class="block block4">
 			<a href="hike.html"><img id ="hikeimg" class="img" src = "hikecircle1.png" alt="Hike"></a>
-			<h2>Hike</h2>
+			<h2> Hike </h2>
 		</div>
 	</div>
 	
-<script>
-		('.img').hover(
-  			function () {
-    			$(this).show();
-  			}, 
-  			function () {
-    			$(this).hide();
-  			}
-		);
-</script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js">
+  		$('img.img').hover(function(){
+    		$(this).fadeOut();
+    	}, function(){
+    		$(this).show();
+  });
+});
+//		('bikeimg').hover(
+//  			function () {
+//    			$(this).show();
+//  			}, 
+//  			function () {
+//    			$(this).hide();
+//  			}
+//		);
+	</script>
+	
+
 	
 </body>
 </html>
