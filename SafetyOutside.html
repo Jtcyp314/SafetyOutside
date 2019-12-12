@@ -10,10 +10,23 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
-<body>
+<body onload="zipFunction()">
 	
+
 <!--	Code for logo-->
 	<img id = "logo" src = "logo.png" a href="index.html">
+	
+	<!--	Code for "I want to" text -->
+<!--
+	<div class="container1">
+		<h1>
+		I WANT TO ... 
+		</h1>
+	</div>
+-->
+	
+	
+<!--	Code for activity blocks -->
 	<div class="container2">
 		<div class="block block1">
 			<a href="activity.html"><img id ="bikeimg" class="img" src = "bikingcircle.png" alt="Bike"></a>
@@ -33,6 +46,7 @@
 		</div>
 	</div>
 	
+<!--
 	<script src="https://code.jquery.com/jquery-3.4.1.js">
   		$('img.img').hover(function(){
     		$(this).fadeOut();
@@ -40,6 +54,7 @@
     		$(this).show();
   });
 });
+
 //		('bikeimg').hover(
 //  			function () {
 //    			$(this).show();
@@ -48,6 +63,26 @@
 //    			$(this).hide();
 //  			}
 //		);
+	</script>	
+-->
+<!--
+	<form>
+	<input type="number" name="enteredFormZip" min="0" max ="99999">
+		
+	
+	</form>
+-->
+		
+	<script language="javascript">
+		var finalZipc;
+		
+		function zipFunction() {
+		  var enteredAlertZip = prompt("Please enter your zipcode:");
+		  if (person != null) {
+			  finalZip = eneteredZip;
+		  }
+		}
+
 	</script>
 	
 

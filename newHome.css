@@ -9,26 +9,30 @@ body{
 }
 
 #logo{
-	
-
-	position: relative;
-	float: top;
-	float: left;
+	position: fixed;
+	top: 0;
+	left: 0;
 }
 
 a:hover{
 	
 }
 
-.container2{
-/*
-	overflow: hidden;
+.container1{
 	position: relative;
-	top: 10em;
-	right: 15em;
-	z-index: 997;
-	float:right;
-*/
+	float: top;
+	top: 50px;
+	width: 40%;
+	
+}
+
+h1{
+	color: #fff;
+	font-size: 35px;
+	font-family:  Arial;
+	
+}
+.container2{
 	position: relative;
 	float: right;
 	border-left:25em;
