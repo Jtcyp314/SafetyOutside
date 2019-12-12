@@ -1,0 +1,47 @@
+body {
+    background: #161616;
+  }
+  
+  h1 {
+    font-weight: 200;
+    margin: 10px;
+  }
+  #title {
+    width:100%;
+    font-family: 'Fredoka One', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #FF007F;
+    text-align:center;
+    margin:30px 0;
+  }
+  #hour {
+      width:100%;
+      background-color:#bdbdbd;
+      font-family: 'Roboto', sans-serif;
+      padding: 20px;
+      overflow: hidden;
+      margin: 30px;
+  }
+  #icon {
+    float:left;
+  }
+  #info {
+    float:left;
+    width:25%;
+    color: #161616;
+    height:100%;
+    background-color: #afafaf;
+    padding:20px;
+    text-align: center;
+  }
+  #safety {
+    padding: 10px;
+    float:left;
+  }
+  
+  #alerts{
+  list-style-image: url();
+  
+  }
+  /* colors: #00FFFF, #C2FF50, #FF007F */

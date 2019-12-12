@@ -175,7 +175,7 @@ function adjustForTemp(activity, temp)
     }
     if(temp > HOTTER_TEMP && temp < HOTTEST_TEMP) {
         addAlert("Temperatures are very hot. Heat cramps and exhaustion are possible.");
-        addSuggestions("Stay hydrated and limit intense exercise to a short period.");
+        addSuggestion("Stay hydrated and limit intense exercise to a short period.");
         if(activity == "swim") 
             return 50;
         else
@@ -238,36 +238,4 @@ function calculateSafety(activity, weather_id, weather_descrip, temp, time, suns
     if(safetyVal < 0)
         safetyVal = 0;
     return safetyVal;
-}
-
-/////////////////////////
-//  RUNNING TEST DATA  //
-/////////////////////////
-
-//replace with database info
-var data = [
-  {
-    "activity" : "swim", 
-    "weather_id": 800, 
-    "weather_descrip": "clear sky", 
-    "temp": 306.15, 
-    "time": 1568984400, 
-    "sunset": 1569002733, 
-    "sunrise": 1568958164, 
-    "wind_speed": 4.75 
-  }
-];
-numData = 1;
-
-for(i = 0; i < numData; i++) {
-  safety = calculateSafety(data[i].activity, data[i].weather_id, data[i].weather_descrip, data[i].temp, data[i].time, data[i].sunset, data[i].sunrise, data[i].wind_speed);
-  //printing results for now -> send back to webpage later
-  console.log("RESULTS:");
-  console.log("safety value: " + safety);
-  console.log("suggestions:");
-  for(i = 0; i < numSuggestions; i++)
-    console.log(suggestions[i]);
-  console.log("alerts:");
-  for(i = 0; i < numAlerts; i++)
-    console.log(alerts[i]);
 }
