@@ -3,15 +3,15 @@
     <head>
         <title>Results</title>
         <link rel="stylesheet" href="results.css"> 
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <img id = "logo" src = "logo.png" a href="index.html">
-        
 
         <script src="safety_algorithm.js"></script>
         <script>
-            const NUM_HOURS = 1;
+            const NUM_HOURS = 2;
             function toF (tempK) {
                 return Math.floor((tempK - 273) * 9/5 + 32);
             }
@@ -36,9 +36,8 @@
                 document.write("<h3>"+temp+" &#8457</h3>");
                 document.write("<h3>" + weather + "</h3></div>");  
 
-                //printing out the safety info
-                document.write("<div id='safety'><h1>our safety rating: " + safety_rating + "</h1>");
-                document.write("<h1>weather alerts: ");
+                //printing out the alerts and suggestions
+                document.write("<div id='alerts'><h1>weather alerts: ");
                 if(alerts.length == 0)
                     document.write("none</h1>");
                 else {
@@ -53,8 +52,10 @@
                     tips.forEach(function (tip) {
                         document.write("<li>"+tip+"</li>");
                     });
-                    document.write("</ul></div></div>");
+                    document.write("</ul>");
                 }
+                //printing out the safety rating
+                document.write("</div><div id='safety'><h1>our safety rating: <br>" + safety_rating + "</h1></div></div>");
             }
             //replace with object from server
             var obj = {
@@ -65,7 +66,7 @@
             {
                 "dt": 1568984400,
                 "main": {
-                    "temp": 293.73,
+                    "temp": 312.73,
                     "temp_min": 293.73,
                     "temp_max": 293.816,
                     "pressure": 1024.11,
@@ -86,7 +87,39 @@
                     "all": 0
                 },
                 "wind": {
-                    "speed": 12,
+                    "speed": 4.67,
+                    "deg": 98.909
+                },
+                "sys": {
+                    "pod": "d"
+                },
+                "dt_txt": "2019-09-20 13:00:00"
+            }, 
+            {
+                "dt": 1568984400,
+                "main": {
+                    "temp": 300,
+                    "temp_min": 293.73,
+                    "temp_max": 293.816,
+                    "pressure": 1024.11,
+                    "sea_level": 1024.11,
+                    "grnd_level": 1019.47,
+                    "humidity": 32,
+                    "temp_kf": -0.08
+                },
+                "weather": [
+                {
+                    "id": 800,
+                    "main": "Clear",
+                    "description": "clear sky",
+                    "icon": "01d"
+                }
+                ],
+                "clouds": {
+                    "all": 0
+                },
+                "wind": {
+                    "speed": 13,
                     "deg": 98.909
                 },
                 "sys": {
@@ -115,34 +148,25 @@
             var sunset = obj.city.sunset;
             var sunrise = obj.city.sunrise;
             document.write("<div id = 'title'><h1>Weather for " + city + "</h1></div>");
-            //turn into for loop
-            for(i = 0; i < NUM_HOURS; i++) {
-                var weather_id = obj.list[i].weather[0].id;
-                var iconcode = obj.list[i].weather[0].icon;
+            
+            for(idx = 0; idx < NUM_HOURS; idx++) {
+                console.log(idx);
+                var weather_id = obj.list[idx].weather[0].id;
+                var iconcode = obj.list[idx].weather[0].icon;
                 var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
-                var timeDisp = getTime(obj.list[i].dt_txt); //time to display
-                var time = obj.list[i].dt;
-                var wind_speed = obj.list[i].wind.speed;
-                var temp = obj.list[i].main.temp;
+                var timeDisp = getTime(obj.list[idx].dt_txt); //time to display
+                var time = obj.list[idx].dt;
+                var wind_speed = obj.list[idx].wind.speed;
+                var temp = obj.list[idx].main.temp;
                 var tempDisp = toF(temp); //temp to display
-                var weather_descrip = obj.list[i].weather[0].description
+                var weather_descrip = obj.list[idx].weather[0].description
                 var safetyRating = calculateSafety(activity, weather_id, weather_descrip, temp, time, sunset, sunrise, wind_speed);
                 printInfo(timeDisp, tempDisp, weather_descrip, iconurl, safetyRating, alerts, suggestions);
             }
-            for(i = 0; i < NUM_HOURS; i++) {
-                console.log("RESULTS:");
-                console.log("safety value: " + safety);
-                console.log("suggestions:");
-                for(j = 0; j < numSuggestions; j++)
-                    console.log(suggestions[j]);
-                console.log("alerts:");
-                for(j = 0; j < numAlerts; j++)
-                    console.log(alerts[j]);
-            }
+
         </script>
-        <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
         
-        <!---
+        <!--
         <div id="hour">
           <div id="info">
             <h1>{time}</h1>
@@ -151,8 +175,7 @@
             <h3>{weather}</h3>
           </div>  
         
-          <div id="safety">
-            <h1>our safety rating: {}</h1>
+          <div id="alerts">
             <h1>weather alerts:</h1>
             <ul>
               <li>bla bla bla </li>
@@ -162,7 +185,11 @@
               <li>bla bla bla</li>
             </ul>
           </div>
+          <div id="safety">
+                <h1>our safety rating: {}</h1>
+          </div>
         </div>
         -->
+    
     </body>
 </html>

@@ -120,6 +120,9 @@ function checkForImmediateNo(temp, activity, weather_id, weather_descrip, wind, 
 // adjusts the safety score based on the type of weather 
 function adjustForWeather(activity, weather_id, weather_descrip) 
 {
+    alerts = [];
+    suggestions = [];
+    numAlerts = 0, numSuggestions = 0;
     //looking at the main weather categories
     main_id = Math.floor(weather_id/100); 
     switch(main_id) {

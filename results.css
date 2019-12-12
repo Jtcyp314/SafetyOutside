@@ -1,5 +1,5 @@
 body {
-    background: #161616;
+    background: #222;
   }
   
   h1 {
@@ -35,13 +35,23 @@ body {
     padding:20px;
     text-align: center;
   }
-  #safety {
+  #hour h1 {
+    font-family: 'Fredoka One', sans-serif;
+  }
+  #alerts {
     padding: 10px;
-    float:left;
+    float: left;
+  }
+  #safety {
+    float:right;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    color: #161616;
+  }
+  h3, ul {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
   }
   
-  #alerts{
-  list-style-image: url();
-  
-  }
   /* colors: #00FFFF, #C2FF50, #FF007F */
