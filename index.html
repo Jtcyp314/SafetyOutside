@@ -1,133 +1,96 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Safety Outside</title>
-     <link href="https://fonts.googleapis.com/css?family=Jockey+One&display=swap" rel="stylesheet">
-    <link href="https://seattleowl.com/pointer.js/pointer.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="home.css">
-     <link rel="stylesheet" href="button.css">
-   
+	<meta charset="UTF-8">
+	<title>Safety Outside</title>
+	<link rel="stylesheet" href="newHome.css">
+<!--     <link href="https://seattleowl.com/pointer.js/pointer.css" rel="stylesheet">-->
+	<link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+	
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
-    
-    <body>
-        <img id = "logo" src = "logo.png" a href="index.html">
+
+<body>
+	
+<!--	Code for logo-->
+	<img id = "logo" src = "logo.png" a href="index.html">
+
+
 <div class="perspective-text">
-
- <div class="perspective-line">
-    <p>Is it</p>
-    <p>Is it</p>
-  </div>
-  <div class="perspective-line">
-    <p><span class="safe1">Safe</span> to</p>
- <p><span class="safe2">Safe</span> to</p>
-  </div>
-  <div class="perspective-line">
-      <p>GO</p>
-      <p><span class="bike">BIKE</span> or <span class="run">RUN</span></p>
-  </div>
-  <div class="perspective-line">
-    <p>Outside?</p>
-    <p><span class="swim">SWIM</span> or <span class="hike">HIKE</span>?</p>
-  </div>
-    <div>
-<!--        <h4 id="abtinfo">Because exploring the outdoors should be safe.</h4>-->
+     <div class="perspective-line">
+        <p>Is it</p>
+        <p>Is it</p>
     </div>
- 
-          <h2 id="selection">I WANT TO ...</h2>
+        <div class="perspective-line">
+            <p><span class="safe1">Safe</span> to</p>
+            <p><span class="safe2">Safe</span> to</p>
         </div>
-            
-	  <div id= "container">
-        <div class= "row1">
-          <div class = "column">
-      <a href="activity.html"><img id ="bikeimg" class="img1" src = "bikingcircle.png" alt="Bike">
-              <h3 id="bikewords">BIKE</h3></a>
-       <div class = "column">  
-       <a href="run.html"><img id ="runimg" class="img1" src = "test1.png" alt="Run">
-            <h3 id="runwords">RUN</h3></a>
-              </div>
+            <div class="perspective-line">
+                <p>GO</p>
+                <p><span class="bike">BIKE</span> or <span class="run">RUN</span></p>
             </div>
-    <div class= "row2">
-    <div class = "column">  
-       <a href="swim.html"><img id ="swimimg" class="img2" src = "swimmingcircle.png" alt="Swim">
-           <h3 id="swimwords">SWIM</h3></a>
-      <div class = "column">  
-       <a href="hike.html"><img id ="hikeimg" class="img2" src = "hikecircle1.png" alt="Hike">
-             <h3 id="hikewords">HIKE</h3></a>
-    </div>
+                <div class="perspective-line">
+                    <p>Outside?</p>
+                    <p><span class="swim">SWIM</span> or <span class="hike">HIKE</span>?</p>
+                </div>
         </div>
-		</div>
-	 </div>
-	    </div>
     
-        
-<div class="fabs">
-  <a href="index.html" target="_blank" class="fab"><span id="homeword">HOME</span></a>
-  <a href="about.html" target="_blank" class="fab"><span id="abtword">ABOUT</span></a>
-
-  <a id="prime" class="fab"><span id = "plus">&#43;</span><i class="prime zmdi zmdi-plus"></i></a>
-</div>
-        
-
-<script src="https://seattleowl.com/pointer.js/pointer.js"></script>
+    
+    
+	<div class="container2">
+		<div class="block block1">
+           <input type="image" src="bikingcircle.png" alt="Bike" id ="bikeimg" class="img" onclick="myFunction()">
+			 <h3 id="bikewords">BIKE</h3>
+		</div>
+		<div class="block block2">
+             <input type="image" src="test1.png" alt="Bike" id ="runimg" class="img" onclick="myFunction()">
+			 <h3 id="runwords">RUN</h3>
+		</div>
+		<div class="block block3">
+             <input type="image" src="swimmingcircle.png" alt="Swim" id ="swimimg" class="img" onclick="myFunction()">
+			 <h3 id="swimwords">SWIM</h3>
+		</div>
+		<div class="block block4">
+            <input type="image" src="hikecircle1.png" alt="Hike" id ="hikeimg" class="img" onclick="myFunction()">
+			 <h3 id="runwords">HIKE</h3>
+		</div>
+	</div>
+	
+    <div id="myForm" style="display:none">
+        <form action="/action_page.php">
+            <span id="zipcode"> ZIPCODE: </span><input type="text">
+            <input type="submit" value="Submit">
+</form>
+        </div>
+    
+    
+<!--<script src="https://seattleowl.com/pointer.js/pointer.js"></script>-->
         <script>
-init_pointer({
-	pointerColor: "#fff", // Css color
-	ringSize: 15, // Pixels
-	ringClickSize: 10 // Pixels when clicking
-})
-        </script>
-       
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script language="javascript" type="text/javascript">
-            $('#prime').click(function() {
-  toggleFab();
-});
-
-//Toggle chat and links
-function toggleFab() {
-  $('.prime').toggleClass('is-active');
-  $('#prime').toggleClass('is-float');
-  $('.fab').toggleClass('is-visible');
-  
-}
-
-// Ripple effect
-var target, ink, d, x, y;
-$(".fab").click(function(e) {
-  target = $(this);
-  //create .ink element if it doesn't exist
-  if (target.find(".ink").length == 0)
-    target.prepend("<span class='ink'></span>");
-
-  ink = target.find(".ink");
-  //incase of quick double clicks stop the previous animation
-  ink.removeClass("animate");
-
-  //set size of .ink
-  if (!ink.height() && !ink.width()) {
-    //use parent's width or height whichever is larger for the diameter to make a circle which can cover the entire element.
-    d = Math.max(target.outerWidth(), target.outerHeight());
-    ink.css({
-      height: d,
-      width: d
-    });
+//init_pointer({
+//	pointerColor: "#fff", // Css color
+//	ringSize: 10, // Pixels
+//	ringClickSize: 5 // Pixels when clicking
+//})
+    
+//mydiv = document.getElementById("myForm");
+// $("myForm").hide();
+function myFunction() {
+  var x = document.getElementById("myForm");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
   }
-
-  //get click coordinates
-  //logic = click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center;
-  x = e.pageX - target.offset().left - ink.width() / 2;
-  y = e.pageY - target.offset().top - ink.height() / 2;
-
-  //set the position and add class .animate
-  ink.css({
-    top: y + 'px',
-    left: x + 'px'
-  }).addClass("animate");
-});
-
-        </script>
-    </body>
-    </html>
-
+}
+//function myFunction() {
+//  var x = document.getElementById("myForm");
+//  if (x.style.display === "none") {
+//    x.style.display = "block";
+//  } else {
+//    x.style.display = "none";
+//  }
+//}
+	</script>
+</body>
+</html>
