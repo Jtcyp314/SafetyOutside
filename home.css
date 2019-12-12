@@ -1,40 +1,47 @@
+@charset "UTF-8";
+/* CSS Document */
 body{
-    display: flex;
-    background: #222;
-    overflow: hidden;
+	background: #222;
+    overflow-y: hidden;
 }
+
 #logo{
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin-top: 2em;
-    margin-left: 2em;
-    height: 11em;
+	position:absolute;
+	float: left;
+}
+
+
+.container2{
+
+	position: relative;
+	float: right;
+	border-left:25em;
+	padding-top: 8em;
+	margin-right: 22em;
+	display: inline-block;
+	vertical-align: middle;
+	margin-bottom: 10em;
+    font-family: Arial;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: white;
+}
+
+#bikeimg{
+    height: 8.4em;
     width: auto;
 }
-
-#container{
-    position: relative;
+#runimg{
+     height: 8.4em;
+    width: auto;
 }
-
-#selection{
-    font-family: 'Jockey One', sans-serif;
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin-top: 2.5em;
-    margin-right: 3.5em;
-    color: #fff;
-    font-size: 55px;
-    font-weight: 800;
-    letter-spacing: .25em;
+#swimimg{
+     height: 8.4em;
+    width: auto;
 }
-
-#abtinfo{
-    margin-top: 14em;
-    font-size: 20px;
-    letter-spacing: 0.1em;
-    font-family: TImes;
+#hikeimg{
+     height: 8.4em;
+    width: auto;
 }
 .run{
     color: #ffff00;
@@ -55,121 +62,74 @@ body{
 .safe2{
     color: #ff0000;
 }
-#imgs{
-     margin-left: 14em;
-}
-.img1{
-    height: 10em;
-    width: auto;
 
-}
 
-.img2{
-     height: 10em;
-    width: auto;
-/*    margin-top: 5em;*/
-  
-}
 
-.column{
-    display: flex;
-    padding-left: 10em;
-    padding-right: 1em;
-}
-.row1{
-    flex: 50%;
-    padding: 0.25em;
-    margin-top: 16em;
-    margin-left: 10em;
-}
-.row2{
-     flex: 50%;
-    padding: 0.25em;
-    margin-top: 7em;
-}
 .perspective-text {
-    margin-top: 4em;
-    margin-left: 1.25em;
-  color: white;
+    position:static;
+    float: left;
   font-family: Arial;
-  font-size: 58px;
   font-weight: 900;
   letter-spacing: -2px;
   text-transform: uppercase;
+    margin-top: 18em;
+    margin-left: 9em;
+  color: white;
+    cursor: crosshair;
 }
 
-.perspective-line {
-  height: 50px;
-  overflow: hidden;
-  position: relative;
+div.block.block1{
+    padding-bottom: 1em;
 }
-
-#bikewords{
-   position: fixed;
-    top: 0;
-    right: 0;
-    margin-top: 15.25em;
-    margin-right: 16.5em;
-    font-family:  'Fredoka One';
-    font-size: 29px;
-    letter-spacing: 0.5em;
-   text-decoration: none;
-    color: #fff;
+div.block.block2{
+    padding-bottom: 1em;
 }
-#bikewords:hover{
+div.block.block3{
+    padding-bottom: 1em;
+}
+h3{
+   margin-left: 1.5em;
+}
+h3:hover{
+    font-family: Arial;
     color: #FF007F;
 }
-#runwords{
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin-top: 15.25em;
-    margin-right: 5.5em;
-    font-family:  'Fredoka One';
-    font-size: 29px;
-    letter-spacing: 0.5em;
-   text-decoration: none;
-    color: #fff;
-}
-#runwords:hover{
-    color: #C2FF50;
-}
-#swimwords{
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin-top: 25.25em;
-    margin-right: 16em;
-    font-family:  'Fredoka One';
-    font-size: 29px;
-    letter-spacing: 0.5em;
-   text-decoration: none;
-    color: #fff;
-}
-#swimwords:hover{
-   color: #00FFFF;
-}
-#hikewords{
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin-top: 25.25em;
+
+#myForm{
+    position: absolute;
+    right:0;
+    margin-top: 10em;
     margin-right: 5em;
-    font-family:  'Fredoka One';
-    font-size: 29px;
-    letter-spacing: 0.5em;
-   text-decoration: none;
-    color: #fff;
+    font-family: Arial;
 }
-#hikewords:hover{
-    color: #FF6600;
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+
+  border: 1px solid rgba(81, 203, 238, 1);
 }
 
+input[type=submit]{
+    background-color: #39ff14 ;
+    border-radius: 3px;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 2px;
+    letter-spacing: 1px;
+}
+#zipcode{
+    color: white;
+}
 p {
   margin: 0;
   height: 50px;
   line-height: 50px;
   transition: all 0.5s ease-in-out;
+font-size: 50px;
+}
+.perspective-line {
+  height: 50px;
+  overflow: hidden;
 }
 
 .perspective-line:nth-child(odd) {
@@ -182,7 +142,7 @@ p {
   position: relative;
 }
 .perspective-line:hover p{
-  transform: translate(0, -50px);
+  transform: translate(0, -80px);
 }
 .perspective-line:nth-child(1) {
   left: 29px;
@@ -205,4 +165,8 @@ p {
 }
 p {
   transition: all 0.5s ease-in-out;
+}
+.block{
+	height: 50%;
+	width: 200px;
 }
