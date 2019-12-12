@@ -116,6 +116,7 @@ input[type=submit]{
     padding: 5px 10px;
     margin-left: 2px;
     letter-spacing: 1px;
+    font-weight: bold;
 }
 #zipcode{
     color: white;
